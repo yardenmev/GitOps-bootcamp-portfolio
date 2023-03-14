@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: todo
+  name: todo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todo
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: todo
+    spec:
+      containers:
+      - image: 644435390668.dkr.ecr.eu-west-1.amazonaws.com/yarden
+        name: yarden
+        # ports:
+        #   - containerPort: 5000
+        #     name: appport
+        env:
+        - name: "MONGO_URI"
+          value: mongodb://mongodb.default.svc.cluster.local:27017
+        - name: "FLASK_APP"
+          value: todo.py
+status: {}
+          # value: mongodb://mongodb.default.svc.cluster.local:27017
