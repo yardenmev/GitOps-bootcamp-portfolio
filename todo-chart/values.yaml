@@ -49,7 +49,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: 
+    - host: yarden-todo.duckdns.org
       paths:
         - path: /todo
           pathType: Prefix

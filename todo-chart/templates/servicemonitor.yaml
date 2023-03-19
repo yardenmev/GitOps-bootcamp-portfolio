@@ -2,7 +2,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   labels:
-    # release: {{.Release.Name}}
+    release: prometheus
     serviceMonitorSelector: prometheus
   name: todoservicemonitor
   namespace: default
@@ -17,3 +17,4 @@ spec:
   selector:
     matchLabels:
       app.kubernetes.io/name: todo-todo-app
+      app.kubernetes.io/name: todo-app
