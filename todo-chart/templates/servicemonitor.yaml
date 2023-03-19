@@ -5,7 +5,6 @@ metadata:
     release: prometheus
     serviceMonitorSelector: prometheus
   name: todoservicemonitor
-  namespace: default
 spec:
   endpoints:
   - interval: 10s
