@@ -1,12 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: 'prometheus'
+  name: 'efk'
+spec:
 spec:
   project: default
   source:
     repoURL: 'https://github.com/yardenmev/GitOps-bootcamp-portfolio'
-    path: prometheus
+    path: efk
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
