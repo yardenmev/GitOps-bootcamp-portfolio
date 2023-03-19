@@ -3,7 +3,6 @@ kind: Application
 metadata:
   name: 'efk'
 spec:
-spec:
   project: default
   source:
     repoURL: 'https://github.com/yardenmev/GitOps-bootcamp-portfolio'
