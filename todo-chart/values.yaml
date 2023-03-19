@@ -51,7 +51,7 @@ ingress:
   hosts:
     - host: yarden-todo.duckdns.org
       paths:
-        - path: /todo
+        - path: /
           pathType: Prefix
   tls: []
   #  - secretName: chart-example-tls
